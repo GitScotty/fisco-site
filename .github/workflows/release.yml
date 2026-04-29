@@ -1,0 +1,45 @@
+name: Update site on release
+
+# When a GitHub release is published with a .xlsm asset attached,
+# this workflow copies the asset into the site's downloads folder
+# and bumps the version in src/_data/site.js, then commits and pushes.
+# Cloudflare Pages picks up the push and redeploys.
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  update-site:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Download release .xlsm asset
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          mkdir -p src/assets/downloads /tmp/release
+          gh release download "${{ github.event.release.tag_name }}" \
+            --pattern "*.xlsm" \
+            --dir /tmp/release
+          cp /tmp/release/*.xlsm src/assets/downloads/FISCO-latest.xlsm
+
+      - name: Update site config
+        run: |
+          VERSION="${{ github.event.release.tag_name }}"
+          DATE=$(date -u +%Y-%m-%d)
+          sed -i "s/latestVersion: \".*\"/latestVersion: \"${VERSION#v}\"/" src/_data/site.js
+          sed -i "s/latestReleaseDate: \".*\"/latestReleaseDate: \"$DATE\"/" src/_data/site.js
+
+      - name: Commit and push
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add src/assets/downloads/FISCO-latest.xlsm src/_data/site.js
+          git commit -m "Release ${{ github.event.release.tag_name }}"
+          git push

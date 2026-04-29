@@ -1,0 +1,31 @@
+---
+layout: layouts/base.njk
+title: Download
+description: Download the latest release of the FISCO model.
+permalink: /download/
+---
+<h1>Download FISCO</h1>
+<p class="lede">Latest release: v{{ site.latestVersion }} — {{ site.latestReleaseDate | date }}.</p>
+
+<div class="card-grid">
+  <article class="card">
+    <h3>FISCO model (Excel)</h3>
+    <p>The complete .xlsm template, including macros for Eurostat data updates and the defence-clause scenario.</p>
+    <p><a class="btn btn-primary" href="/assets/downloads/FISCO-latest.xlsm">Download .xlsm</a></p>
+    <p class="muted">Macros must be enabled.</p>
+  </article>
+  <article class="card">
+    <h3>Mac compatibility</h3>
+    <p>An Excel-for-Mac entry point is provided via the <code>EurostatUpdateMac</code> macro. Some elements of the workflow are still Windows-first; full parity is in progress.</p>
+  </article>
+</div>
+
+<h2>System requirements</h2>
+<ul>
+  <li>Microsoft Excel 2019 or later (Windows or Mac).</li>
+  <li>Macros enabled (required for the Eurostat data fetcher).</li>
+  <li>Internet connection for live data updates.</li>
+</ul>
+
+<h2>Older versions</h2>
+<p>Previous releases are listed in the <a href="/changelog/">changelog</a>.</p>

@@ -1,0 +1,54 @@
+---
+layout: layouts/base.njk
+title: Feedback
+description: Report a bug in FISCO or suggest a change.
+permalink: /feedback/
+---
+<h1>Report a bug or suggest a change</h1>
+<p class="lede">Spotted a calculation that looks wrong, or have an idea for a feature? Let me know — every report goes straight to my inbox.</p>
+
+<form class="form-grid" action="{{ site.feedbackEndpoint }}" method="POST">
+  <div>
+    <label for="name">Your name</label>
+    <input type="text" id="name" name="name" required>
+  </div>
+  <div>
+    <label for="email">Your email</label>
+    <input type="email" id="email" name="email" required>
+    <p class="field-help">Used only to reply to you.</p>
+  </div>
+  <div>
+    <label for="organisation">Organisation (optional)</label>
+    <input type="text" id="organisation" name="organisation">
+  </div>
+  <div>
+    <label for="version">FISCO version</label>
+    <input type="text" id="version" name="version" placeholder="e.g. v1.3.0">
+  </div>
+  <div>
+    <label for="type">Type of feedback</label>
+    <select id="type" name="type" required>
+      <option value="bug">Bug report</option>
+      <option value="suggestion">Suggestion / feature request</option>
+      <option value="data">Data discrepancy</option>
+      <option value="other">Other</option>
+    </select>
+  </div>
+  <div>
+    <label for="message">Details</label>
+    <textarea id="message" name="message" required placeholder="What did you observe? What did you expect?"></textarea>
+  </div>
+
+  {# Honeypot — hidden from real users, catches naive spam bots. #}
+  <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+  {# Formspree: redirect to thanks page after submission. #}
+  <input type="hidden" name="_subject" value="FISCO feedback">
+  <input type="hidden" name="_next" value="{{ site.url }}/feedback-sent/">
+
+  <div>
+    <button type="submit" class="btn btn-primary">Send feedback</button>
+  </div>
+</form>
+
+<p class="muted" style="margin-top: 2rem;">Prefer email? Just write to the address shown on the <a href="/">FISCO landing page</a> footer once the site is live.</p>
