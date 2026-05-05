@@ -6,10 +6,13 @@
   "scripts": {
     "build": "eleventy",
     "start": "eleventy --serve",
-    "clean": "rimraf _site"
+    "clean": "rimraf _site",
+    "deploy": "npm run build && wrangler deploy",
+    "preview": "npm run build && wrangler dev"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.1.5",
-    "rimraf": "^5.0.5"
+    "rimraf": "^5.0.5",
+    "wrangler": "^4.88.0"
   }
 }
