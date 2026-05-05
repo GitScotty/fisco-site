@@ -12,6 +12,7 @@ html { -webkit-text-size-adjust: 100%; }
   --primary: #1a3a6c;
   --primary-hover: #14305a;
   --accent: #c87f0a;
+  --wordmark-orange: #d97706;
   --max-width: 960px;
   --radius: 6px;
 }
@@ -56,10 +57,12 @@ main.container {
 .wordmark {
   font-weight: 800;
   font-size: 1.25rem;
-  letter-spacing: 0.18em;
+  letter-spacing: 0.01em;
   color: var(--primary);
   text-decoration: none;
 }
+.wm-blue { color: var(--primary); }
+.wm-orange { color: var(--wordmark-orange); }
 .primary-nav {
   display: flex;
   gap: 1.5rem;
@@ -81,6 +84,15 @@ main.container {
 }
 .site-footer p { margin: 0.25rem 0; font-size: 0.9rem; }
 .muted { color: var(--text-muted); }
+.eu-funding {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+.eu-funding p { margin: 0; }
+.eu-emblem { height: 50px; width: auto; display: block; }
 
 /* === Typography === */
 h1, h2, h3 {
