@@ -1,31 +1,82 @@
 ---
 layout: layouts/base.njk
 title: Download
-description: Download the latest release of the FISCO model.
+description: Download the latest release of the FISCO model, worked examples and test scenarios.
 permalink: /download/
 ---
 <h1>Download FISCO</h1>
 <p class="lede">Latest release: v{{ site.latestVersion }} — {{ site.latestReleaseDate | date }}.</p>
 
-<div class="card-grid">
+<div class="card-grid" style="grid-template-columns: 1fr;">
   <article class="card">
-    <h3>FISCO model (Excel)</h3>
-    <p>The complete .xlsm template, including macros for Eurostat data updates and the defence-clause scenario.</p>
-    <p><a class="btn btn-primary" href="/assets/downloads/FISCO-latest.xlsm">Download .xlsm</a></p>
+    <h3>Blank template</h3>
+    <p>Start here. The full FISCO model with all formulas and macros wired, but no country data populated. Import your own outturn and plan inputs to assess compliance for your jurisdiction.</p>
+    <p><a class="btn btn-primary" href="/assets/downloads/FISCO-template-latest.xlsm">Download template (.xlsm)</a></p>
     <p class="muted">Macros must be enabled.</p>
   </article>
+</div>
+
+<h2>Worked examples</h2>
+<p>FISCO populated with real data for two member states. Useful for learning how the model is structured, and for cross-checking your own results against a known baseline.</p>
+
+<div class="card-grid">
   <article class="card">
-    <h3>Mac compatibility</h3>
-    <p>An Excel-for-Mac entry point is provided via the <code>EurostatUpdateMac</code> macro. Some elements of the workflow are still Windows-first; full parity is in progress.</p>
+    <h3>Greece</h3>
+    <p>Populated with Greek outturn data and Draft Budgetary Plan inputs.</p>
+    <p><a class="btn btn-primary" href="/assets/downloads/FISCO-greece-latest.xlsm">Download model (.xlsm)</a></p>
+
+    <h4 style="margin-top:1.5rem;">Test scenarios</h4>
+    <p class="muted" style="font-size:0.9rem;">Drop into the model via the Import Plan macro to explore alternative trajectories.</p>
+    <ul>
+      <li>
+        <a href="/assets/downloads/Greece-TestScenario1-AveragePerformanceTo2028.xlsx">Scenario 1 — Average performance to 2028</a>
+        <br><span class="muted" style="font-size:0.9rem;">Net-expenditure path tracking the recent historical average through 2028.</span>
+      </li>
+      <li>
+        <a href="/assets/downloads/Greece-TestScenario2-HighNationalDefence2026to2028.xlsx">Scenario 2 — High national defence, 2026–2028</a>
+        <br><span class="muted" style="font-size:0.9rem;">Tests the defence-clause adjustment with elevated defence spending across the three-year window.</span>
+      </li>
+    </ul>
+  </article>
+
+  <article class="card">
+    <h3>Latvia</h3>
+    <p>Populated with Latvian outturn data and Medium-Term Fiscal-Structural Plan inputs.</p>
+    <p><a class="btn btn-primary" href="/assets/downloads/FISCO-latvia-latest.xlsm">Download model (.xlsm)</a></p>
+
+    <h4 style="margin-top:1.5rem;">Test scenarios</h4>
+    <p class="muted" style="font-size:0.9rem;">Drop into the model via the Import Plan macro to explore alternative trajectories.</p>
+    <ul>
+      <li>
+        <a href="/assets/downloads/Latvia-TestScenario1-DraftBudgetaryPlan2026.xlsx">Scenario 1 — Draft Budgetary Plan 2026</a>
+        <br><span class="muted" style="font-size:0.9rem;">Inputs as submitted in Latvia's 2026 DBP.</span>
+      </li>
+      <li>
+        <a href="/assets/downloads/Latvia-TestScenario2-AveragePerformanceTo2028.xlsx">Scenario 2 — Average performance to 2028</a>
+        <br><span class="muted" style="font-size:0.9rem;">Net-expenditure path tracking the recent historical average through 2028.</span>
+      </li>
+    </ul>
   </article>
 </div>
+
+<h2>Using a test scenario</h2>
+<ol>
+  <li>Download the country model (or your own copy of the template).</li>
+  <li>Download a scenario file from the same country.</li>
+  <li>Open the model in Excel, with macros enabled.</li>
+  <li>Run the Import Plan macro and point it at the scenario file. The scenario inputs will populate the relevant cells, leaving the rest of the model untouched.</li>
+  <li>Inspect the assessment outputs to see how that scenario fares against the rule.</li>
+</ol>
 
 <h2>System requirements</h2>
 <ul>
   <li>Microsoft Excel 2019 or later (Windows or Mac).</li>
-  <li>Macros enabled (required for the Eurostat data fetcher).</li>
-  <li>Internet connection for live data updates.</li>
+  <li>Macros enabled (required for the Eurostat data fetcher and the Import Plan macro).</li>
+  <li>Internet connection for live Eurostat updates.</li>
 </ul>
+
+<h2>Mac compatibility</h2>
+<p>An Excel-for-Mac entry point is provided via the <code>EurostatUpdateMac</code> macro. Some elements of the workflow are still Windows-first; full parity is in progress.</p>
 
 <h2>Older versions</h2>
 <p>Previous releases are listed in the <a href="/changelog/">changelog</a>.</p>

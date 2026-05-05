@@ -9,7 +9,7 @@ permalink: /changelog/
 
 All notable changes to FISCO are listed here. Versioning follows [semantic versioning](https://semver.org/).
 
-## v1.3.0 — 28 April 2026
+## v1.1.0 — 28 April 2026
 
 ### Added
 - macOS-compatible Eurostat data-fetch macro (`EurostatUpdateMac`).
@@ -19,6 +19,6 @@ All notable changes to FISCO are listed here. Versioning follows [semantic versi
 ### Changed
 - Outturn data now pulled at the latest Eurostat vintage; historical net-expenditure growth no longer matches the Draft Budgetary Plan 2026 by design. See the [docs](/docs/) and the Code of Conduct (ECOFIN 16230/25) for the treatment of revisions.
 
-## v1.2.0 — earlier
+## v1.0.0
 
-Initial public release.
+First public release of the FISCO model.
