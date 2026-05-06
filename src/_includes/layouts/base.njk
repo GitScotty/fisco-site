@@ -10,6 +10,17 @@
   <meta property="og:url" content="{{ site.url }}{{ page.url }}">
   <meta property="og:type" content="website">
   <link rel="stylesheet" href="/assets/css/style.css">
+  <script>
+    // Wordmark ripple animation: play once per session.
+    // Runs synchronously in <head> so the class is set before CSS renders, avoiding a flash.
+    try {
+      if (sessionStorage.getItem("wm-played")) {
+        document.documentElement.classList.add("wm-played");
+      } else {
+        sessionStorage.setItem("wm-played", "1");
+      }
+    } catch (e) { /* private mode etc. — let the animation play */ }
+  </script>
 </head>
 <body>
   {% include "partials/nav.njk" %}
