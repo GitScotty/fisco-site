@@ -81,6 +81,9 @@ main.container {
 @media (prefers-reduced-motion: reduce) {
   .wm-orange-letter { animation: none; }
 }
+@media (max-width: 768px) {
+  .wm-orange-letter { animation: none; }
+}
 html.wm-played .wm-orange-letter { animation: none; }
 .primary-nav {
   display: flex;
