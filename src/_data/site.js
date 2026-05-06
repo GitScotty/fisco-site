@@ -10,12 +10,9 @@ module.exports = {
 
   author: "Scott Cameron",
 
-  // Formspree endpoint for the feedback form.
-  // TODO: sign up at https://formspree.io with cameronscottd@gmail.com,
-  // create a form, paste the URL below (looks like https://formspree.io/f/xxxxxxxx).
   feedbackEndpoint: "https://formspree.io/f/mpqbrweg",
 
   // Latest released version of the FISCO model — surfaced on home and download pages.
-  latestVersion: "1.1.0",
-  latestReleaseDate: "2026-04-28",
+  latestVersion: "1.1.1",
+  latestReleaseDate: "2026-05-06",
 };
