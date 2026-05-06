@@ -61,7 +61,13 @@ main.container {
   color: var(--primary);
   text-decoration: none;
 }
+.wm-word { display: inline-block; white-space: nowrap; }
 .wm-blue { color: var(--primary); }
+@property --i {
+  syntax: '<integer>';
+  inherits: false;
+  initial-value: 0;
+}
 .wm-orange-letter {
   display: inline-block;
   color: var(--wordmark-orange);
