@@ -19,6 +19,6 @@ All notable changes to FISCO are listed here. Versioning follows [semantic versi
 ### Changed
 - Historical net-expenditure growth no longer defers to imputed implementation outlook by design (pulls latest from Eurostat per EC guidance as sole source of truth). See the [docs](/docs/) and the Code of Conduct (ECOFIN 16230/25) for the treatment of revisions.
 
-## v1.0.0
+## v1.1.0
 
 First public release of the FISCO model.
