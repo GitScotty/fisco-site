@@ -55,7 +55,7 @@ main.container {
   gap: 2rem;
 }
 .wordmark {
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.25rem;
   letter-spacing: 0.05em;
   color: var(--primary);
