@@ -59,6 +59,19 @@ permalink: /download/
   </article>
 </div>
 
+<div class="callout">
+  <h2 style="margin-top:0;">If macros are blocked when you open the file</h2>
+  <p>Since 2022, Microsoft blocks macros by default in any Office file downloaded from the internet. You'll see a red banner reading <em>"BLOCKED — Macros from the internet are blocked"</em> with no enable button. This is a generic Microsoft default and is not specific to FISCO.</p>
+  <p>To unblock the file:</p>
+  <ol>
+    <li>Close the file in Excel if it's open.</li>
+    <li>In Windows Explorer, right-click the downloaded <code>.xlsm</code> file → <strong>Properties</strong>.</li>
+    <li>At the bottom of the <strong>General</strong> tab, find the <strong>Security</strong> section and tick <strong>Unblock</strong>.</li>
+    <li>Click <strong>OK</strong>, then re-open the file. Macros will now run normally.</li>
+  </ol>
+  <p>If your organisation's IT policy still blocks macros after unblocking, ask your IT team to add the file's folder as an Excel <strong>Trusted Location</strong>. We are working on digitally signing the macros, which will allow IT to permit them via a trusted-publisher policy across your organisation.</p>
+</div>
+
 <h2>Using a test scenario</h2>
 <ol>
   <li>Download the country model (or your own copy of the template).</li>

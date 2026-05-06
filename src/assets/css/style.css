@@ -94,6 +94,17 @@ main.container {
 .eu-funding p { margin: 0; }
 .eu-emblem { height: 50px; width: auto; display: block; }
 
+/* === Callout === */
+.callout {
+  background: #fff8e1;
+  border-left: 4px solid var(--accent);
+  padding: 1rem 1.25rem;
+  margin: 2rem 0;
+  border-radius: var(--radius);
+}
+.callout p:last-child { margin-bottom: 0; }
+.callout ol { margin: 0.5rem 0; }
+
 /* === Typography === */
 h1, h2, h3 {
   color: var(--primary);
