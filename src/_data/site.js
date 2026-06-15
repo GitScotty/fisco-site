@@ -13,6 +13,6 @@ module.exports = {
   feedbackEndpoint: "https://formspree.io/f/mpqbrweg",
 
   // Latest released version of the FISCO model — surfaced on home and download pages.
-  latestVersion: "1.1.2",
-  latestReleaseDate: "2026-06-08",
+  latestVersion: "1.1.3",
+  latestReleaseDate: "2026-06-15",
 };

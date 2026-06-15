@@ -9,6 +9,11 @@ permalink: /changelog/
 
 All notable changes to FISCO are listed here. Versioning follows [semantic versioning](https://semver.org/).
 
+## v1.1.3 — 15 June 2026
+
+### Changed
+- MTP parameters consolidated back into Step 1. Previous feedback had suggested relocating them to Step 3 to reduce clutter, but test feedback indicated this disrupted the logical flow of the setup workflow.
+
 ## v1.1.2 — 8 June 2026
 
 ### Added

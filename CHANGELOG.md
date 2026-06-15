@@ -2,6 +2,11 @@
 
 All notable changes to the FISCO model are listed here. Versioning follows [semantic versioning](https://semver.org/).
 
+## v1.1.3 — 2026-06-15
+
+### Changed
+- MTP parameters consolidated back into Step 1. Previous feedback had suggested relocating them to Step 3 to reduce clutter, but test feedback indicated this disrupted the logical flow of the setup workflow.
+
 ## v1.1.0 — 2026-04-28
 
 ### Added
