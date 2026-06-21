@@ -2,6 +2,11 @@
 
 All notable changes to the FISCO model are listed here. Versioning follows [semantic versioning](https://semver.org/).
 
+## v1.1.4 — 2026-06-21
+
+### Added
+- Custom scenario tool, with a matching "Clear custom scenario tool" button.
+
 ## v1.1.3 — 2026-06-15
 
 ### Changed

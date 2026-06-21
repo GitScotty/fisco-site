@@ -9,6 +9,11 @@ permalink: /changelog/
 
 All notable changes to FISCO are listed here. Versioning follows [semantic versioning](https://semver.org/).
 
+## v1.1.4 — 21 June 2026
+
+### Added
+- Custom scenario tool, with a matching "Clear custom scenario tool" button.
+
 ## v1.1.3 — 15 June 2026
 
 ### Changed
