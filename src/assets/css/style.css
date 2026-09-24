@@ -127,6 +127,26 @@ html.wm-played .wm-orange-letter { animation: none; }
 .callout p:last-child { margin-bottom: 0; }
 .callout ol { margin: 0.5rem 0; }
 
+/* === News === */
+.news {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--primary);
+  border-radius: var(--radius);
+  padding: 1rem 1.25rem;
+  margin: 0 0 2rem;
+}
+.news-label {
+  margin: 0 0 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--primary);
+}
+.news-date { margin: 0 0 0.5rem; font-size: 0.9rem; color: var(--text-muted); }
+.news article p:last-child { margin-bottom: 0; }
+
 /* === Typography === */
 h1, h2, h3 {
   color: var(--primary);
