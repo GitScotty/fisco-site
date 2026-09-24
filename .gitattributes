@@ -1,0 +1,9 @@
+# Store text files with Unix line endings, whatever the local editor or sync tool does
+* text=auto eol=lf
+
+# Excel and image files are binary: never convert them
+*.xlsm binary
+*.xlsx binary
+*.png binary
+*.jpg binary
+*.ico binary
