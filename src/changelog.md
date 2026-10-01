@@ -9,6 +9,19 @@ permalink: /changelog/
 
 All notable changes to FISCO are listed here. Versioning follows [semantic versioning](https://semver.org/).
 
+## v1.2.0 — 1 October 2026
+
+### Added
+- Energy expenditure escape clause.
+- Defence expenditure adjustment, presented in line with the Commission's treatment in the [2026 European Semester Spring Package](https://reforms-investments.ec.europa.eu/publications-0/2026-european-semester-spring-package_en).
+- "Correction for breaks in time series" line in the control account, as introduced in the 2026 Spring Package.
+
+### Changed
+- Control account restructured to match the Commission's latest presentation in the 2026 Spring Package.
+
+### Added (site)
+- Tutorial video covering a full start to finish assessment with the new defence and energy exemptions, linked from the blank template and the Latvia extension on the Download page.
+
 ## v1.1.4 — 21 June 2026
 
 ### Added
